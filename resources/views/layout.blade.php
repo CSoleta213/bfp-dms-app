@@ -115,7 +115,7 @@
             </a>
           </div>
           <div class="menu">
-            <a class="{{ Request::is('applicants') || Request::is('applicants/*/edit') ? 'active':'' }}" href="/establishments">
+            <a class="{{ Request::is('applicants') || Request::is('applicants/*/edit') ? 'active':'' }}" href="{{ route('applicants.index') }}">
               <i class='bx bx-buildings'></i>
               <span>Establishments</span>
             </a>

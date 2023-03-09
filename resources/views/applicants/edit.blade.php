@@ -4,7 +4,7 @@
   <div style="display: flex; flex: 1; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">Establishment’s Profile</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments / List of Establishments / Open Profile</small>
+      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments / Open Profile</small>
     </div>
     <div>
       <form>

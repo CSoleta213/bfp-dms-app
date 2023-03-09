@@ -4,7 +4,7 @@
   <div style="display: flex; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">Establishments</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments / List of Establishments</small>
+      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments</small>
     </div>
     <div>
       <!-- Trigger/Open The Modal -->
