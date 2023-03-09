@@ -39,8 +39,8 @@ button i {
     font-size: 20px;
 }
 
-.bxs-user-circle {
-    font-size: 40px;
+.user, .bx-menu {
+    cursor: pointer;
 }
 
 /* MODAL */
@@ -115,6 +115,7 @@ button i {
   /* The Close Button */
   span.close {
     color: #000;
+    cursor: pointer;
     /* align-self: flex-end; */
     /* float: right; */
     /* font-size: 50px; */

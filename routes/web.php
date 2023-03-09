@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ApplicantController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::resource('applicants', ApplicantController::class);
 
 Route::get('/', function () {
     return view('login');
@@ -27,6 +31,10 @@ Route::get('/establishments', function () {
 
 Route::get('/add-new-applicant', function () {
     return view('add-new-applicant');
+});
+
+Route::get('/open-profile', function () {
+    return view('open-profile');
 });
 
 Route::get('/fsic-sms-notification', function () {

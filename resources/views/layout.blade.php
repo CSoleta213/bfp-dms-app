@@ -102,7 +102,7 @@
           <h2>Bureau of Fire Protection - Apalit R3</h2>
         </div>
         <div class="user">
-          <i class='bx bxs-user-circle'></i>
+          <i class='bx bxs-user-circle bx-md'></i>
         </div>
       </div>
 
@@ -115,7 +115,7 @@
             </a>
           </div>
           <div class="menu">
-            <a class="{{ Request::is('establishments') ? 'active':'' }}" href="/establishments">
+            <a class="{{ Request::is('applicants') || Request::is('applicants/*/edit') ? 'active':'' }}" href="/establishments">
               <i class='bx bx-buildings'></i>
               <span>Establishments</span>
             </a>
