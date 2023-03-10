@@ -11,7 +11,6 @@
           <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">BFP Apalit DMS</a></li>
           >
           <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">Dashboard</a></li>
-          >
         </ul>
       </small>
     </div>
