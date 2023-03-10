@@ -4,7 +4,13 @@
   <div style="display: flex; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">Establishments</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments</small>
+      <small style="color: #986D9A">
+        <ul style="display: flex; align-items: center; list-style: none;">
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">BFP Apalit DMS</a></li>
+          >
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">Establishments</a></li>
+        </ul>
+      </small>
     </div>
     <div>
       <!-- Trigger/Open The Modal -->
@@ -112,7 +118,7 @@
         <hr style="border: 1px solid #2D1967; width: 100%;">
         @csrf
         <div class="modal-body">
-          <div style="display: flex; flex: 1; flex-direction: row; align-items: flex-start;">
+          <div style="display: flex; flex: 1; flex-direction: row; align-items: flex-start; margin-bottom: 5px;">
             <div style="flex: 1;">
               <label for="bin_ban">BIN BAN No.</label><br>
               <input type="text" id="bin_ban" name="bin_ban" placeholder="BIN BAN No." style="width: 100%;"><br>
@@ -124,45 +130,51 @@
             </div>
           </div>
 
-          <label for="bus_name">Business Name</label>
-          <input type="text" id="bus_name" name="bus_name" placeholder="Business Name">
+          <div style="display: flex; flex-direction: column; margin-bottom: 5px;">
+            <label for="bus_name">Business Name</label>
+            <input type="text" id="bus_name" name="bus_name" placeholder="Business Name">
+          </div>
           
-          <label for="owner">Owner</label>
-          <input type="text" id="owner" name="owner" placeholder="Name of Owner">
+          <div style="display: flex; flex-direction: column; margin-bottom: 5px;">
+            <label for="owner">Owner</label>
+            <input type="text" id="owner" name="owner" placeholder="Name of Owner">
+          </div>
           
-          <label for="address">Address</label>
-          <input type="text" id="spec_address" name="spec_address" placeholder="House No., Building, Street Name">
-          <div style="display: flex; margin: 10px 0;">
-            <div style="flex: 1;">
-              <select name="brgy" id="brgy">
-                <option value="">--- Select a Barangay ---</option>
-                <option value="Balucuc">Balucuc</option>
-                <option value="Calantipe">Calantipe</option>
-                <option value="Cansinala">Cansinala</option>
-                <option value="Capalangan">Capalangan</option>
-                <option value="Colgante">Colgante</option>
-                <option value="Paligui">Paligui</option>
-                <option value="Sampaloc">Sampaloc</option>
-                <option value="San Juan">San Juan</option>
-                <option value="San Vicente">San Vicente</option>
-                <option value="Sucad">Sucad</option>
-                <option value="Sulipan">Sulipan</option>
-                <option value="Tabuyuc">Tabuyuc</option>
-              </select>
-            </div>
-            <div style="display: flex;" >
-              <input type="text" id="municipality" name="municipality" value="Apalit" style="width: 75px; margin-left: 5px;" readonly>
-              <input type="text" id="province" name="province" value="Pampanga" style="width: 100px; margin-left: 5px;" readonly>
-              <input type="text" id="postal_code" name="postal_code" value="2016" style="width: 50px; margin-left: 5px;" readonly>
+          <div style="display: flex; flex-direction: column; margin-bottom: 5px;">
+            <label for="address">Address</label>
+            <input type="text" id="spec_address" name="spec_address" placeholder="House No., Building, Street Name">
+            <div style="display: flex; margin: 10px 0 0 0;">
+              <div style="flex: 1;">
+                <select name="brgy" id="brgy">
+                  <option value="">--- Select a Barangay ---</option>
+                  <option value="Balucuc">Balucuc</option>
+                  <option value="Calantipe">Calantipe</option>
+                  <option value="Cansinala">Cansinala</option>
+                  <option value="Capalangan">Capalangan</option>
+                  <option value="Colgante">Colgante</option>
+                  <option value="Paligui">Paligui</option>
+                  <option value="Sampaloc">Sampaloc</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Vicente">San Vicente</option>
+                  <option value="Sucad">Sucad</option>
+                  <option value="Sulipan">Sulipan</option>
+                  <option value="Tabuyuc">Tabuyuc</option>
+                </select>
+              </div>
+              <div style="display: flex;" >
+                <input type="text" id="municipality" name="municipality" value="Apalit" style="width: 75px; margin-left: 5px;" readonly>
+                <input type="text" id="province" name="province" value="Pampanga" style="width: 100px; margin-left: 5px;" readonly>
+                <input type="text" id="postal_code" name="postal_code" value="2016" style="width: 50px; margin-left: 5px;" readonly>
+              </div>
             </div>
           </div>
-          <div style="display: flex;">
-            <div>
-              <label for="contact_no">Contact Number</label><br>
+          <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column;">
+              <label for="contact_no">Contact Number</label>
               <input type="tel" id="contact_no" name="contact_no" placeholder="09123456789">
             </div>
-            <div style="flex: 1; margin-left: 10px;">
-              <label for="occupancy_type">Type of Occupancy</label><br>
+            <div style="display: flex; flex: 1; flex-direction: column; margin-left: 10px;">
+              <label for="occupancy_type">Type of Occupancy</label>
               <select name="occupancy_type" id="occupancy_type" style="width: 100%;">
                 <option value="">--- Select Type ---</option>
                 <option value="Apartment">Apartment</option>

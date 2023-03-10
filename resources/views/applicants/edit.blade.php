@@ -4,7 +4,15 @@
   <div style="display: flex; flex: 1; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">Establishment’s Profile</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Establishments / Open Profile</small>
+      <small style="color: #986D9A">
+        <ul style="display: flex; align-items: center; list-style: none;">
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">BFP Apalit DMS</a></li>
+          >
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">Establishments</a></li>
+          >
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A;">Open Profile</a></li>
+        </ul>
+      </small>
     </div>
     <div>
       <form>
@@ -24,10 +32,10 @@
     <div style="flex: 1; margin: 0 20px;">
       <div style="display: flex; flex: 1; align-items: center;">
         <a href="{{ route('applicants.index') }}"><i class='bx bx-arrow-back' style="color: #2D1967;"></i></a>
-        <h3 style="color: #2D1967; margin-left: 10px;">Establishment 20</h3>
+        <h2 style="color: #2D1967; margin: 10px;">{{ $applicant->bus_name }}</h2>
       </div>
       <div>
-        <small style="background-color: rgba(255, 165, 0, 0.77); color: #FFF; padding: 5px 10px; border-radius: 50px;">Pending FSIC</small>
+        <small style="background-color: rgba(255, 165, 0, 0.77); color: #FFF; padding: 2px 20px; border-radius: 50px; font-weight: bold;">Pending FSIC</small>
         <span style="margin-left: 10px;">4 out of 7 Documents</span>
       </div>
       @if ($errors->any())
@@ -40,11 +48,11 @@
           </ul>
         </div>
       @endif
-      <form action="{{ route('applicants.update',$applicant->id) }}" method="POST">
+      <form action="{{ route('applicants.update',$applicant->id) }}" method="POST" style="margin: 50px 0;">
         @csrf
         @method('PUT')
         <div class="modal-body">
-          <div style="display: flex; flex: 1; flex-direction: row; align-items: flex-start;">
+          <div style="display: flex; flex: 1; flex-direction: row; align-items: flex-start; margin-bottom: 20px;">
             <div style="flex: 1;">
               <label for="bin_ban">BIN BAN No.</label><br>
               <input type="text" id="bin_ban" name="bin_ban" value="{{ $applicant->bin_ban }}" style="width: 100%;"><br>
@@ -56,39 +64,45 @@
             </div>
           </div>
 
-          <label for="bus_name">Business Name</label>
-          <input type="text" id="bus_name" name="bus_name" value="{{ $applicant->bus_name }}">
+          <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="bus_name">Business Name</label>
+            <input type="text" id="bus_name" name="bus_name" value="{{ $applicant->bus_name }}">
+          </div>
+
+          <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="owner">Owner</label>
+            <input type="text" id="owner" name="owner" value="{{ $applicant->owner }}">
+          </div>
           
-          <label for="owner">Owner</label>
-          <input type="text" id="owner" name="owner" value="{{ $applicant->owner }}">
-          
-          <label for="address">Address</label>
-          <input type="text" id="spec_address" name="spec_address" value="{{ $applicant->spec_address }}">
-          <div style="display: flex; margin: 10px 0;">
-            <div style="flex: 1;">
-              <select name="brgy" id="brgy" style="width: 100%;">
-                <option value="{{ $applicant->brgy }}">{{ $applicant->brgy }}</option>
-                <option value="Balucuc">Balucuc</option>
-                <option value="Calantipe">Calantipe</option>
-                <option value="Cansinala">Cansinala</option>
-                <option value="Capalangan">Capalangan</option>
-                <option value="Colgante">Colgante</option>
-                <option value="Paligui">Paligui</option>
-                <option value="Sampaloc">Sampaloc</option>
-                <option value="San Juan">San Juan</option>
-                <option value="San Vicente">San Vicente</option>
-                <option value="Sucad">Sucad</option>
-                <option value="Sulipan">Sulipan</option>
-                <option value="Tabuyuc">Tabuyuc</option>
-              </select>
-            </div>
-            <div style="display: flex;">
-              <input type="text" id="municipality" name="municipality" value="Apalit" style="width: 75px; margin-left: 5px;" readonly>
-              <input type="text" id="province" name="province" value="Pampanga" style="width: 100px; margin-left: 5px;" readonly>
-              <input type="text" id="postal_code" name="postal_code" value="2016" style="width: 50px; margin-left: 5px;" readonly>
+          <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="address">Address</label>
+            <input type="text" id="spec_address" name="spec_address" value="{{ $applicant->spec_address }}">
+            <div style="display: flex; margin: 10px 0 0 0;">
+              <div style="flex: 1;">
+                <select name="brgy" id="brgy" style="width: 100%;">
+                  <option value="{{ $applicant->brgy }}">{{ $applicant->brgy }}</option>
+                  <option value="Balucuc">Balucuc</option>
+                  <option value="Calantipe">Calantipe</option>
+                  <option value="Cansinala">Cansinala</option>
+                  <option value="Capalangan">Capalangan</option>
+                  <option value="Colgante">Colgante</option>
+                  <option value="Paligui">Paligui</option>
+                  <option value="Sampaloc">Sampaloc</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Vicente">San Vicente</option>
+                  <option value="Sucad">Sucad</option>
+                  <option value="Sulipan">Sulipan</option>
+                  <option value="Tabuyuc">Tabuyuc</option>
+                </select>
+              </div>
+              <div style="display: flex;">
+                <input type="text" id="municipality" name="municipality" value="Apalit" style="width: 75px; margin-left: 5px;" readonly>
+                <input type="text" id="province" name="province" value="Pampanga" style="width: 100px; margin-left: 5px;" readonly>
+                <input type="text" id="postal_code" name="postal_code" value="2016" style="width: 50px; margin-left: 5px;" readonly>
+              </div>
             </div>
           </div>
-          <div style="display: flex;">
+          <div style="display: flex; flex: 1; flex-direction: row; align-items: flex-start; margin-bottom: 20px;">
             <div>
               <label for="contact_no">Contact Number</label><br>
               <input type="tel" id="contact_no" name="contact_no" value="{{ $applicant->contact_no }}">
@@ -109,9 +123,6 @@
               </select>
             </div>
           </div>
-
-          <hr style="border: 1px solid #2D1967; width: 100%;">
-
           <div style="display: flex; justify-content: center; margin: 0 0 20px 0px; align-items: center;">
             <a href="/establishments" style="color: #1A73E8; text-decoration: none; border: 1px solid #DADCE0; padding: 5px; border-radius: 6px; width: 100px; text-align: center;">Cancel</a>
             <!-- <button type="submit" style="margin-left: 10px; background-color: #1A73E8; color: #FFF; border: none; width: 100px;">Add</button> -->

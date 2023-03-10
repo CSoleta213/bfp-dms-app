@@ -4,7 +4,13 @@
   <div style="display: flex; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">FSIC SMS Notification</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / FSIC SMS Notification</small>
+      <small style="color: #986D9A">
+        <ul style="display: flex; align-items: center; list-style: none;">
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">BFP Apalit DMS</a></li>
+          >
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">FSIC SMS Notification</a></li>
+        </ul>
+      </small>
     </div>
   </div>
 

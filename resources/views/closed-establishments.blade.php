@@ -4,13 +4,19 @@
   <div style="display: flex; align-items: center;">
     <div style="display: flex; flex: 1; flex-direction: row; align-items: center;">
       <h2 class="title">Closed Establishments</h2>
-      <small style="margin-left: 20px; color: #986D9A">BFP Apalit DMS / Closed Establishments</small>
+      <small style="color: #986D9A">
+        <ul style="display: flex; align-items: center; list-style: none;">
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">BFP Apalit DMS</a></li>
+          >
+          <li style="margin: 5px;"><a href="" style="text-decoration: none; color: #986D9A">Closed Establishments</a></li>
+        </ul>
+      </small>
     </div>
   </div>
 
   <div style="display: flex; flex: 1; flex-direction: column; background-color: #FFF; border-radius: 6px; padding: 0 20px;">
     <div style="display: flex; flex: 1; align-items: center;">
-      <div style="flex: 3;">
+      <div style="flex: 4;">
         <h2 style="color: #2D1967;">List of Closed Establishments</h2>
       </div>
       <div style="display: flex; flex: 7; justify-content: flex-end; align-items: center;">
