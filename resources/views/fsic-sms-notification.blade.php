@@ -44,17 +44,17 @@
       </div>
     </div>
     <div style="overflow-x:auto;">
-      <table style="display: flex; flex-wrap: nowrap; border-collapse: collapse; width: 130%;">
+      <table style="border-collapse: collapse; width: 100%;">
         <tr style="background-color: #EFEBF9;">
           <th><input type="checkbox" name="" id=""></th>
-          <th style="width: 125px; padding: 0 10px;">Bin Ban No.</th>
-          <th style="width: 125px; padding: 0 10px;">Business Establishment</th>
-          <th style="width: 150px; padding: 0 10px;">Business Name</th>
-          <th style="width: 200px; padding: 0 10px;">Owner</th>
-          <th style="width: 200px; padding: 0 10px;">Type of Occupancy</th>
-          <th style="width: 125px; padding: 0 10px;">FSIC Status</th>
-          <th style="width: 125px; padding: 0 10px;">FSIC SMS Notification</th>
-          <th style="width: 100px; padding: 0 10px;">Action</th>
+          <th style="min-width: 125px; padding: 0 10px;">Bin Ban No.</th>
+          <th style="min-width: 125px; padding: 0 10px;">Business Establishment</th>
+          <th style="min-width: 150px; padding: 0 10px;">Business Name</th>
+          <th style="min-width: 200px; padding: 0 10px;">Owner</th>
+          <th style="min-width: 200px; padding: 0 10px;">Type of Occupancy</th>
+          <th style="min-width: 125px; padding: 0 10px;">FSIC Status</th>
+          <th style="min-width: 125px; padding: 0 10px;">FSIC SMS Notification</th>
+          <th style="min-width: 100px; padding: 0 10px;">Action</th>
         </tr>
         <tr style="border-bottom: 1px solid #E0E0E0;">
           <td style="text-align: center; padding: 10px;"><input type="checkbox" name="" id=""></td>

@@ -55,18 +55,18 @@
     @endif
    
     <div style="overflow-x:auto;">
-      <table style="display: flex; flex-wrap: nowrap; border-collapse: collapse; width: 160%;">
+      <table style="border-collapse: collapse; width: 100%;">
         <tr style="background-color: #EFEBF9;">
-          <th style="width: 125px; padding: 0 10px;">Bin Ban No.</th>
-          <th style="width: 125px; padding: 0 10px;">Business Establishment</th>
-          <th style="width: 150px; padding: 0 10px;">Business Name</th>
-          <th style="width: 200px; padding: 0 10px;">Owner</th>
-          <th style="width: 200px; padding: 0 10px;">Type of Occupancy</th>
-          <th style="width: 125px; padding: 0 10px;">FSIC Status</th>
-          <th style="width: 175px; padding: 0 10px;">Files Uploaded</th>
-          <th style="width: 150px; padding: 0 10px;">Expiry Date</th>
-          <th style="width: 125px; padding: 0 10px;">Expires In</th>
-          <th style="width: 125px; padding: 0 10px;">Action</th>
+          <th style="min-width: 125px; padding: 0 10px;">Bin Ban No.</th>
+          <th style="min-width: 125px; padding: 0 10px;">Business Establishment</th>
+          <th style="min-width: 150px; padding: 0 10px;">Business Name</th>
+          <th style="min-width: 200px; padding: 0 10px;">Owner</th>
+          <th style="min-width: 200px; padding: 0 10px;">Type of Occupancy</th>
+          <th style="min-width: 125px; padding: 0 10px;">FSIC Status</th>
+          <th style="min-width: 175px; padding: 0 10px;">Files Uploaded</th>
+          <th style="min-width: 150px; padding: 0 10px;">Expiry Date</th>
+          <th style="min-width: 125px; padding: 0 10px;">Expires In</th>
+          <th style="min-width: 125px; padding: 0 10px;">Action</th>
         </tr>
         @foreach ($applicants as $applicant)
         <tr style="border-bottom: 1px solid #E0E0E0;">
